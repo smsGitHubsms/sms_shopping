@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <form action="" method="post">
+    {% csrf_token %}
+    <h2>User Login</h2>
+
+    <input type="text" name="UsernamE" placeholder="USER NAME"><br><br>
+    <input type="password" name="PassworD" placeholder="PASSWORD"><br><br>
+    <input type="submit" value="LOGIN" >
+
+    <div>
+      {% for j in messages %}
+      <h4>{{j}}</h4>
+      {% endfor %}
+    </div>
+  </form>
+</body>
+</html>
+
+
+
+

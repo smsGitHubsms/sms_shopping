@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="" method="post">
+  {% csrf_token %}
+  <h2>User Registration</h2>
+  <div class="input-container1">
+    <i class="fa fa-user icon1"></i>
+    <input class="input-field1" type="text" name="UserName" placeholder="User name" >
+  </div>
+  <br>
+  <div class="input-container2">
+    <i class="fa fa-user icon2"></i>
+    <input class="input-field2" type="text" name="FirstName" placeholder="First name" >
+  </div>
+  <br>
+  <div class="input-container3">
+    <i class="fa fa-user icon3"></i>
+    <input class="input-field3" type="text" name="LastName" placeholder="Last name" >
+  </div>
+  <br>
+
+  <div class="input-container4">
+    <i class="fa fa-envelope icon4"></i>
+    <input class="input-field" type="email" name="Email" placeholder="Email">
+  </div>
+  <br>
+  <div class="input-container5">
+    <i class="fa fa-key icon5"></i>
+    <input class="input-field" type="password" name="Password1" placeholder="Password" >
+  </div>
+  <br>
+  <div class="input-container6">
+    <i class="fa fa-key icon6"></i>
+    <input class="input-field" type="password" name="Password2" placeholder="Confirm Password" >
+  </div>
+  <br><br>
+  <button type="submit" class="btn">Register</button>
+</form>
+
+<div>
+   {% for i in messages %}
+   <h4>{{i}}</h4>
+   {% endfor %}
+</div>
+</body>
+</html>
